@@ -1,0 +1,2 @@
+a = "#pythoniscool"
+print(a)
