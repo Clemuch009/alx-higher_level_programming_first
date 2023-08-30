@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+"""
+1-square
+contains class Square that defines a square
+"""
 
 
 class Square:
-    ''' class representing a square
-    '''
-    def __init__(self, size=0):
-        ''' method initializing a square of size size
-        '''
+    """ creates an __init__ method with size instance"""
+    def __init__(self, size=""):
+        """ initializes private instance attribute size"""
         self.__size = size

@@ -1,43 +1,49 @@
 #!/usr/bin/python3
+"""
+5-square
+- contains class Square that defines a square
+- returns the current square area
+- prints in stdout the square with the character #
+"""
 
 
 class Square:
-    ''' class representing a square
-    '''
+    """
+    - creates __init__ method and area method
+    - creates getter and setter for size
+    - prints in stdout the square with the character #
+    """
     def __init__(self, size=0):
-        ''' method initializing a square of size size
-        '''
+        """ initializes instance attribute size """
         self.size = size
 
     @property
     def size(self):
-        ''' method that returns the size of the square
-        '''
+        """ retrieves size """
         return self.__size
 
     @size.setter
     def size(self, value):
-        ''' method that sets the size of the square
-        '''
-        if isinstance(value, int) is False:
-            raise TypeError('size must be an integer')
-        elif value < 0:
-            raise ValueError('size must be >= 0')
-        else:
-            self.__size = value
+        """
+        - sets size
+        - raise errors when value is not int or value is less than 0
+        """
+        if isinstance(value, int) is not True:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
     def area(self):
-        ''' method that returns area of the square
-        '''
+        """ returns the current square area """
         return self.__size * self.__size
 
     def my_print(self):
-        ''' method that prints the square
-        '''
-        if self.__size == 0:
-            print()
-            return
-        for i in range(self.__size):
-            for j in range(self.size):
-                print('#', end='')
-            print()
+        """ prints in stdout the square with the character # """
+        size = self.__size
+        if size == 0:
+            print("")
+        for i in range(size):
+            for j in range(size):
+                print("#", end="")
+            print("")
