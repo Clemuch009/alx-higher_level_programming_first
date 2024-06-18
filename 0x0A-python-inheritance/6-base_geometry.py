@@ -4,6 +4,7 @@
 class BaseGeometry:
     """instance of geometry"""
     def __init__(seLf):
+        """initialize"""
         pass
 
     def area(self):
