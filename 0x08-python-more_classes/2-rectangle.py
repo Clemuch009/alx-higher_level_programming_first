@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-"""rectangle class"""
-
 class Rectangle:
     """initialization"""
     def __init__(self, width=0, height=0 ):
@@ -35,7 +32,9 @@ class Rectangle:
     def height(self):
         """get heigth"""
         return self._height
-   @height.setter
+
+
+    @height.setter
     def height(self, value):
         """set height"""
         if not isinstance(value , int):
