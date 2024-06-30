@@ -68,18 +68,16 @@ class Rectangle:
         return (self.height * 2) + (self.width * 2)
     
     def __str__(self):
-        """return shape"""
+        """
+        return shape
+      """
         if not self.perimeter():
             return ""
-        return '\n'.join('#'*self.width for x in range(self.height))
+        return ('\n'.join('#'*self.width for x in range(self.height)))
 
     def __rep__(self):
         """
         modifies
 
         """
-        return (f"rectangle{self.width} .{self.height} ")
-
-
-       
-
+         return("Rectangle({}, {})".format(self.width, self.height))
