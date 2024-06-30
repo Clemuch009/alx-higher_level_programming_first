@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 """rectangle class
 
 """
@@ -11,7 +9,7 @@ class Rectangle:
 
     """
     def __init__(self, width=0, height=0):
-        """initializes rectangle
+        """initializes
 
         """
         self.width = width
@@ -66,18 +64,17 @@ class Rectangle:
         if self.height == 0 or self.width == 0:
             return 0
         return (self.height * 2) + (self.width * 2)
-    
+
     def __str__(self):
+        """modifies string object
+
         """
-        return shape
-      """
-        if not self.perimeter():
+        if not self.perimeter:
             return ""
-        return ('\n'.join('#'*self.width for x in range(self.height)))
+        return('\n'.join('#' * self.width for x in range(self.height)))
 
-    def __rep__(self):
-        """
-        modifies
+    def __repr__(self):
+        """modifies repr object
 
         """
-         return("Rectangle({}, {})".format(self.width, self.height))
+        return("Rectangle({}, {})".format(self.width, self.height))
