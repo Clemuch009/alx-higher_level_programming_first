@@ -12,12 +12,13 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        """ initializes rectangle object
+        """initializes rectangle object
 
         """
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+
 
     @property
     def width(self):
@@ -69,6 +70,18 @@ class Rectangle:
             return 0
         return (self.height * 2) + (self.width * 2)
 
+    def bigger_or_equal(rect_1, rect_2):
+        """returns the bigger area
+
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError('rect_1 must be an instance of Rectangle')
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError('rect_2 must be an instance of Rectangle')
+        if rect_1.area() >= rect_2.area():
+            return rect_1.area
+        return rect_2.area
+
     def __str__(self):
         """modifies str object
 
@@ -90,15 +103,3 @@ class Rectangle:
         """
         Rectangle.number_of_instances -= 1
         print("{}".format("Bye rectangle..."))
-
-      def bigger_or_equal(rect_1, rect_2):
-        """return bigger area
-
-        """
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError('rect_1 must be an instance of Rectangle')
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError('rect_2 must be an instance of Rectangle')
-        if rect_1.area() >= rect_2.area():
-            return rect_1
-        return rect_2
