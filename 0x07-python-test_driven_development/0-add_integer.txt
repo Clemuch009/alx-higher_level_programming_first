@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+""" addation """
+
+def add_integer(a, b=98):
+""" 
+a + b
+
+"""
+if not isinstance(a ,int)
+"""
+check if a is integer
+
+"""
+if not isinstance(b ,int)
+"""
+check if b is integer
+
+"""
+
+return int(a) + int(b)
+"""
+return addation od int( a ) and int (b)
+     
+
