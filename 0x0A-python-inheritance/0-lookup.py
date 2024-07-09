@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-"""look for methods """
+"""lookup"""
+
+
 def lookup(obj):
-    return (dir(obj))
+    """returns list of dir()"""
+    return([x for x in dir(obj)])
